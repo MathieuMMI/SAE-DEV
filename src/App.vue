@@ -1,26 +1,22 @@
 <template>
   <header>
-    <div class="flex justify-between items-start w-100% h-[70px] lg:h-[90px] xl:h-[170px] relative px-5 pt-5 pb-[11px] bg-amber-400">
-      <mobile-logo class="relative bottom-1.5 lg:hidden"/>
-      <lg-logo class="relative bottom-1.5 hidden lg:flex xl:hidden"/>
-      <logo-normal class="relative bottom-1.5 hidden xl:flex"/>
-      <h1 class="text-3xl text-left text-slate-900">
-      CANTAND’O
-      </h1>
+    <nav class="w-100% relative flex h-[70px] items-start justify-between bg-amber-400 px-5 pt-5 pb-[11px] lg:h-[90px] xl:h-[170px]">
+      <router-link to="/">
+        <mobile-logo class="lg:hidden" />
+        <lg-logo class="hidden lg:flex xl:hidden" />
+        <logo-normal class="hidden xl:flex" />
+      </router-link>
+      <h1 class="h-[27px] w-[117px] flex-shrink-0 flex-grow-0 text-center text-3xl text-slate-900 xl:hidden">CANTAND’O</h1>
       <menu-icon />
-      <nav class="hidden xl:flex">
-        <RouterLink to="/" class="text-blue-600 underline">Accueil</RouterLink>
-        <RouterLink to="/programmation" class="text-blue-600 underline">Programmation</RouterLink>
-        <RouterLink to="/artistes" class="text-blue-600 underline">Artistes</RouterLink>
-        <RouterLink to="/festival" class="text-blue-600 underline">Festival</RouterLink>
-        <RouterLink to="/contact" class="text-blue-600 underline">Contact</RouterLink>
-        <RouterLink to="/concert" class="text-blue-600 underline">Concert</RouterLink>
-        <RouterLink to="/artiste" class="text-blue-600 underline">Artiste</RouterLink>
-        <RouterLink to="/mentions" class="text-blue-600 underline">Mentions</RouterLink>
-      </nav>
-    </div>
+      <ul class="absolute right-[200px] top-[55px] hidden h-6 w-[803px] xl:flex">
+        <li class="ml-10 text-left text-[40px] font-medium text-slate-900"><RouterLink to="/programmation">Programmation</RouterLink></li>
+        <li class="ml-10 text-left text-[40px] font-medium text-slate-900"><RouterLink to="/artistes">Artistes</RouterLink></li>
+        <li class="ml-10 text-left text-[40px] font-medium text-slate-900"><RouterLink to="/festival">Festival</RouterLink></li>
+        <li class="ml-10 text-left text-[40px] font-medium text-slate-900"><RouterLink to="/contact">Contact</RouterLink></li>
+      </ul>
+    </nav>
   </header>
-  
+
   <RouterView />
 </template>
 
