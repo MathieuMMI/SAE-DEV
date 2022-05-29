@@ -16,8 +16,22 @@
       </ul>
     </nav>
   </header>
-
   <RouterView />
+  <footer>
+    <div class="relative flex h-[200px] w-full flex-col items-center justify-start gap-2 bg-stone-900 px-[5px] pt-[15px] pb-[5px]">
+      <p class="mt-1 h-[13px] flex-shrink-0 flex-grow-0 text-left text-[15px] font-medium text-white">
+        Formulaire de contact<router-link to="./views/contact" />
+      </p>
+      <p class="mt-2 h-[15px] flex-shrink-0 flex-grow-0 text-left text-[15px] font-medium text-white">
+        Mentions légales<router-link to="./views/mentions" />
+      </p>
+      <p class="mt-1 h-3 flex-shrink-0 flex-grow-0 text-left text-[15px] font-medium text-white">Nous contacter</p>
+      <img src="../public/img/fb.png" class="mt-3 h-[34px] w-[34px] flex-shrink-0 flex-grow-0" />
+      <div class="relative h-9 w-10 flex-shrink-0 flex-grow-0">
+        <img src="../public/img/twi.png" class="absolute left-[-1px] top-[-1px] h-9 w-10" />
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script>
