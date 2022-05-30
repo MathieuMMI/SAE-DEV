@@ -17,7 +17,7 @@
     </nav>
   </header>
   <RouterView />
-  <footer class="relative flex h-[200px] w-full flex-col items-center gap-2 bg-stone-900 pt-[15px]">
+  <footer class="flex h-[200px] w-full flex-col items-center gap-2 bg-stone-900 pt-[15px]">
     <router-link to="./views/mentions">
       <p class="mt-1 h-[13px] flex-shrink-0 flex-grow-0 text-left text-[15px] font-medium text-white">Formulaire de contact</p>
     </router-link>
