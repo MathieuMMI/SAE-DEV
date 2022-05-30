@@ -4,9 +4,9 @@
     <h2 class="mt-3 ml-3 text-left text-base font-semibold text-black">Programmation</h2>
     <div class="mt-5 flex justify-center">
       <prog-comp />
-      <prog-comp class="relative top-44" />
+      <prog-comp class="relative top-44 md:top-56" />
     </div>
-    <h2 class="mt-52 ml-3 text-left text-base font-semibold text-black">Artistes</h2>
+    <h2 class="mt-52 md:mt-40 ml-3 text-left text-base font-semibold text-black">Artistes</h2>
     <div class="mt-5 flex justify-center gap-12">
       <art-comp />
       <art-comp />
