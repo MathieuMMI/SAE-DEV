@@ -18,13 +18,15 @@
   </header>
   <RouterView />
   <footer class="relative flex h-[200px] w-full flex-col items-center gap-2 bg-stone-900 pt-[15px]">
-    <p class="mt-1 h-[13px] flex-shrink-0 flex-grow-0 text-left text-[15px] font-medium text-white">
-      Formulaire de contact<router-link to="./views/contact" />
-    </p>
-    <p class="mt-2 h-[15px] flex-shrink-0 flex-grow-0 text-left text-[15px] font-medium text-white">
-      Mentions légales<router-link to="./views/mentions" />
-    </p>
-    <p class="mt-1 h-3 flex-shrink-0 flex-grow-0 text-left text-[15px] font-medium text-white">Nous contacter</p>
+    <router-link to="./views/mentions">
+      <p class="mt-1 h-[13px] flex-shrink-0 flex-grow-0 text-left text-[15px] font-medium text-white">Formulaire de contact</p>
+    </router-link>
+    <router-link to="./views/mentions">
+      <p class="mt-2 h-[15px] flex-shrink-0 flex-grow-0 text-left text-[15px] font-medium text-white">Mentions légales</p>
+    </router-link>
+    <router-link to="./views/mentions">
+      <p class="mt-1 h-3 flex-shrink-0 flex-grow-0 text-left text-[15px] font-medium text-white">Nous contacter</p>
+    </router-link>
     <img src="../public/img/fb.png" class="mt-3 h-[34px] w-[34px] flex-shrink-0 flex-grow-0" />
     <img src="../public/img/twi.png" class="h-9 w-10 flex-shrink-0 flex-grow-0" />
   </footer>
