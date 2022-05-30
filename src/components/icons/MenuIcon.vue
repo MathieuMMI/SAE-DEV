@@ -30,8 +30,7 @@
         bg-yellow-500
         motion-safe:transition-transform motion-safe:duration-1000"
         :class="{ 'translate-x-0': menuOuvert }">
-        {{ menuOuvert }}
-        <ul class="mt-12 flex flex-col gap-3 text-center text-3xl">
+        <ul class="mt-36 flex flex-col gap-3 text-center text-3xl">
             <li class="mt-8"><router-link to="/programmation">Programmation</router-link></li>
             <li class="mt-8"><router-link to="/artistes">Artistes</router-link></li>
             <li class="mt-8"><router-link to="/festival">Festival</router-link></li>
@@ -45,7 +44,6 @@
                     viewBox="0 0 50 54"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    class="w-[50px] h-[52px]"
                     preserveAspectRatio="none"
                     @click="menuOuvert = !menuOuvert">
                     <line x1="1.37242" y1="0.666376" x2="48.0798" y2="52.8048" stroke="black"></line>

@@ -6,7 +6,7 @@
         <lg-logo class="hidden lg:flex xl:hidden" />
         <logo-normal class="hidden xl:flex" />
       </router-link>
-      <h1 class="h-[27px] w-[117px] flex-shrink-0 flex-grow-0 text-center text-3xl text-slate-900 xl:hidden">CANTAND’O</h1>
+      <h1 class="flex-shrink-0 flex-grow-0 text-left text-3xl text-slate-900 xl:hidden">CANTAND’O</h1>
       <menu-icon />
       <ul class="absolute right-[200px] top-[55px] hidden h-6 w-[803px] xl:flex">
         <li class="ml-10 text-left text-[40px] font-medium text-slate-900"><RouterLink to="/programmation">Programmation</RouterLink></li>
