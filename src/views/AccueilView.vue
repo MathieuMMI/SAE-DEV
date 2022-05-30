@@ -1,15 +1,24 @@
 <template>
   <main>
     <img src="public\img\accueil.jpg" />
-    <h2 class="mt-3 ml-3 text-left text-base font-semibold text-black">Programmation</h2>
-    <div class="mt-5 flex justify-center">
-      <prog-comp />
-      <prog-comp class="relative top-44 md:top-56" />
+    <div class="">
+      <h2 class="mt-3 ml-3 text-left text-base font-semibold text-black">Programmation</h2>
+      <div class="mb-5 ml-3 mr-3 mt-5 flex justify-center md:ml-8 md:mr-8">
+        <prog-comp />
+        <prog-comp class="mt-44 md:mt-72" />
+        <prog-comp class="hidden lg:flex"/>
+        <prog-comp class="hidden mt-72 xl:flex"/>
+      </div>
     </div>
-    <h2 class="mt-52 md:mt-40 ml-3 text-left text-base font-semibold text-black">Artistes</h2>
-    <div class="mt-5 flex justify-center gap-12">
-      <art-comp />
-      <art-comp />
+    <div class="mb-28 ml-3 mr-3">
+      <h2 class="mt-66 ml-3 text-left text-base font-semibold text-black">Artistes</h2>
+      <div class="mt-5 flex justify-center gap-3">
+        <art-comp />
+        <art-comp />
+        <art-comp class="hidden md:flex"/>
+        <art-comp class="hidden lg:flex"/>
+        <art-comp class="hidden xl:flex"/>
+      </div>
     </div>
   </main>
 </template>
