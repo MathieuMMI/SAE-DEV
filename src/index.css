@@ -10,7 +10,7 @@ h2 {
     font-family : "eb-garamond"
 }
 
-p {
+h3, p {
     font-family : "source-sans-pro"
 }
 /* Mettre ici les styles "globaux" */
