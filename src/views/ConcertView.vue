@@ -22,8 +22,8 @@
     </div>
     <h2 class="mt-3 mb-10 text-center text-sm text-black dark:text-white">Les artistes présents</h2>
     <div class="mb-36 flex">
-      <art-comp class="ml-3" />
-      <art-comp class="ml-auto mr-3" />
+      <router-link to="./views/Artiste"><art-comp class="ml-3" /></router-link>
+      <router-link to="./views/Artiste"><art-comp class="ml-auto mr-3" /></router-link>
     </div>
   </main>
 </template>
