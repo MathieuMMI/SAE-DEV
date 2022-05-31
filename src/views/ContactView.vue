@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h2 class="mb-5 mt-5 text-center text-base font-semibold text-black">Formulaire de contact</h2>
+    <h2 class="mb-5 mt-5 text-center text-2xl font-semibold text-black">Formulaire de contact</h2>
     <div class="flex flex-col gap-5 mb-[100%]">
       <input class="m-auto w-[40%] rounded-[200px] border border-amber-600 bg-white" type="text" placeholder="Nom" />
       <input class="m-auto w-[40%] rounded-[200px] border border-amber-600 bg-white" type="text" placeholder="Prénom" />

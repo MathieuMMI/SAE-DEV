@@ -1,3 +1,3 @@
 <template>
-    <h2>HHHH</h2>
+    <h2 class="text-2xl font-semibold">HHHH</h2>
 </template>

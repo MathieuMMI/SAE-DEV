@@ -1,22 +1,22 @@
 <template>
   <main>
-    <h2 class="mt-3 mb-10 text-center text-sm text-black">Concert d’ouverture</h2>
+    <h2 class="mt-3 mb-10 text-center text-2xl font-semibold">Concert d’ouverture</h2>
     <img src="public\img\concert.jpg" class="m-auto w-[70%] rounded-xl" />
     <div class="ml-4 mt-5 mb-32 justify-center gap-[10%] md:ml-0 md:mr-0 md:flex">
       <div>
-        <h3 class="mb-2 text-left text-base font-semibold text-black">Premier volet</h3>
+        <h3 class="mb-2 text-left text-2xl font-semibold text-black">Premier volet</h3>
         <p class="mb-5 text-left text-sm text-black">Le concert débutera..</p>
       </div>
       <div>
-        <h3 class="mb-2 text-left text-base font-semibold text-black">Second volet</h3>
+        <h3 class="mb-2 text-left text-2xl font-semibold text-black">Second volet</h3>
         <p class="mb-5 text-left text-sm text-black">Nous verrons...</p>
       </div>
       <div>
-        <h3 class="mb-2 text-left text-base font-semibold text-black">Troisième volet</h3>
+        <h3 class="mb-2 text-left text-2xl font-semibold text-black">Troisième volet</h3>
         <p class="mb-5 text-left text-sm text-black">Vincent Niclo a été..</p>
       </div>
       <div>
-        <h3 class="mb-2 text-left text-base font-semibold text-black">Quatrième volet</h3>
+        <h3 class="mb-2 text-left text-2xl font-semibold text-black">Quatrième volet</h3>
         <p class="mb-5 text-left text-sm text-black">Nous verrons...</p>
       </div>
     </div>
