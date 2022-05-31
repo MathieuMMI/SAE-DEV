@@ -1,6 +1,6 @@
 <template>
   <h2 class="mt-5 text-center text-2xl font-semibold">ERREUR 404 - Page introuvable</h2>
-  <div class="mb-[100%] mt-7 justify-center md:flex md:gap-3.5">
+  <div class="mt-7 justify-center md:flex md:gap-3.5">
     <router-link to="/">
       <h3 class="mb-2 text-left text-2xl font-semibold text-black">Accueil</h3>
     </router-link>
@@ -17,6 +17,12 @@
       <h3 class="mb-2 text-left text-2xl font-semibold text-black">Formulaire de contact</h3>
     </router-link>
   </div>
+  <logo-normal class="mt-20 m-auto w-[20%] h-[20%] mb-[40%]" />
 </template>
 
-
+<script>
+import LogoNormal from "../components/LogoNormal.vue";
+export default {
+  components: { LogoNormal, },
+};
+</script>

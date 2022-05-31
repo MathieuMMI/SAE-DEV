@@ -37,7 +37,6 @@ import LogoNormal from "./components/LogoNormal.vue";
 import MobileLogo from "./components/MobileLogo.vue";
 import LgLogo from "./components/LgLogo.vue";
 import MenuIcon from "./components/icons/MenuIcon.vue";
-import { FilmIcon } from "@heroicons/vue/outline";
 export default {
   components: { MobileLogo, LogoNormal, LgLogo, MenuIcon },
 };
