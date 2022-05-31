@@ -1,6 +1,6 @@
 <template>
-   <main class="mb-36">
-    <h2 class="mt-5 mb-7 text-center text-2xl font-semibold text-black">Artistes</h2>
+  <main class="mb-36">
+    <h2 class="mt-5 mb-7 text-center text-2xl font-semibold text-black dark:text-white">Artistes</h2>
     <div class="flex justify-center gap-3 md:ml-8 md:mr-8">
       <art-comp />
       <art-comp />
@@ -28,6 +28,6 @@
 <script>
 import ArtComp from "../components/ArtComp.vue";
 export default {
-  components: { ArtComp, },
+  components: { ArtComp },
 };
 </script>
