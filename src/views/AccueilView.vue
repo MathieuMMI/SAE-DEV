@@ -1,6 +1,6 @@
 <template>
   <main>
-    <img src="public\img\accueil.jpg" />
+    <img src="../assets/accueil.jpg" />
     <div class="">
       <h2 class="mt-3 ml-3 text-left text-base font-semibold text-black">Programmation</h2>
       <div class="mb-5 ml-3 mr-3 mt-5 flex justify-center md:ml-8 md:mr-8">

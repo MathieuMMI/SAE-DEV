@@ -1,7 +1,7 @@
 <template>
   <main>
     <h2 class="mt-3 mb-10 text-center text-2xl font-semibold">Concert d’ouverture</h2>
-    <img src="public\img\concert.jpg" class="m-auto w-[70%] rounded-xl" />
+    <img src="../assets/concert.jpg" class="m-auto w-[70%] rounded-xl" />
     <div class="ml-4 mt-5 mb-32 justify-center gap-[10%] md:ml-0 md:mr-0 md:flex">
       <div>
         <h3 class="mb-2 text-left text-2xl font-semibold text-black">Premier volet</h3>

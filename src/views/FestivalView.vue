@@ -1,6 +1,6 @@
 <template>
   <main>
-    <img src="public\img\festival.jpg" />
+    <img src="../assets/festival.jpg" />
     <h2 class="mt-5 text-center text-2xl font-semibold text-black">Notre festival</h2>
     <p class="mt-3 ml-3 mr-2 text-left text-sm text-black">
       Notre festival....Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore

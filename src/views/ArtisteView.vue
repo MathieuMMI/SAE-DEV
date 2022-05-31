@@ -1,6 +1,6 @@
 <template>
   <main>
-    <img src="public\img\artiste.jpg" class="rounded-bl-xl rounded-br-xl" />
+    <img src="../assets/artiste.jpg" class="rounded-bl-xl rounded-br-xl" />
     <h2 class="mt-3 mb-10 text-center text-2xl font-semibold text-black">Vincent Niclo</h2>
     <div class="ml-4 justify-center mb-32 gap-[10%] md:ml-0 md:mr-0 md:flex">
       <div>
