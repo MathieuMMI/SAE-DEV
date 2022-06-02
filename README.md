@@ -5,3 +5,6 @@
 * [Tailwind](https://tailwindcss.com/docs/guides/vite)
     * avec [plugin pour Prettier](https://github.com/tailwindlabs/prettier-plugin-tailwindcss#readme) pour trier les classes TW automatiquement.
 * [HeroIcons pour Vue 3](https://github.com/tailwindlabs/heroicons#vue)
+
+ArtisteView = Liste simple
+ProgrammationView = Liste complexe
