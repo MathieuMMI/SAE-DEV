@@ -20,19 +20,6 @@
               <label class="custom-file-label" for="file">Sélectionner l'image</label>
             </div>
           </div>
-          <br />
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Concert</span>
-            </div>
-            <select class="custom-select" v-model="concert.nationalite">
-              <option selected disabled>Sélectionner un concert</option>
-              <option v-for="concert in listeConcert" :key="concert.nom">
-                {{ concert.nom }}
-              </option>
-            </select>
-          </div>
-          <br />
         </div>
 
         <div class="card-footer">
@@ -114,7 +101,7 @@ export default {
     },
     previewImage: function (event) {
       this.file = this.$refs.file.files[0];
-      this.concert.image = this.file.name;
+      this.prog.image = this.file.name;
       var input = event.target;
       if (input.files && input.files[0]) {
         var reader = new FileReader();
