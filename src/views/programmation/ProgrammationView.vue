@@ -1,6 +1,7 @@
 <template>
   <h2 class="mt-5 mb-7 text-center text-2xl font-semibold text-black">Programmation</h2>
-  <div class="flex justify-center gap-3 md:ml-8 md:mr-8 mb-[20%]">
+  <router-link to="createConcert"><p class="float-right text-xl text-black">Créer un nouveau concert</p></router-link>
+  <div class="mb-[20%] flex justify-center gap-5 md:ml-8 md:mr-8">
     <figure v-for="concert in listeConcert" :key="concert.nom" class="flex flex-col">
       <img :alt="concert.nom" :src="concert.image" class="w-full rounded-tl-3xl rounded-tr-3xl dark:bg-zinc-900" />
       <figcaption class="rounded-b-lg">
@@ -29,7 +30,7 @@ import {
   where,
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
 
-import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
+import { getStorage, ref, getDownloadURL, uploadString } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
 export default {
   data() {
