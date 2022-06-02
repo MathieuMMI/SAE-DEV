@@ -1,24 +1,68 @@
+<template>
+  <form enctype="multipart/form-data" @submit.prevent="deleteconcert">
+    <h2 class="mb-5 ml-2 text-center text-2xl text-black">Suppression d'un participant</h2>
+    <div class="text-center">
+      <img class="preview img-fluid" :src="imageActuelle" />
+    </div>
+    <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Nom</span>
+      </div>
+      <input class="form-control" placeholder="Nom du concert" v-model="Concert.nom" />
+    </div>
+    <h3 class="alert alert-warning text-center text-black" role="alert">
+      Attention vous allez supprimer ce participant, cette action est irréversible !!
+    </h3>
+    <div>
+      <button type="submit" class="btn btn-dark float-left">Supprimer</button>
+      <button class="btn btn-dark float-right">
+        <RouterLink to="/programmation">Fermer</RouterLink>
+      </button>
+    </div>
+  </form>
+</template>
 <script>
-import { getFirestore, doc, getDoc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
+import {
+  getFirestore,
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  addDoc,
+  updateDoc,
+  setDoc,
+  deleteDoc,
+  onSnapshot,
+  query,
+  orderBy,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
 
-import { getStorage, ref, getDownloadURL, deleteObject } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
+// Storage
+import {
+  getStorage,
+  ref,
+  getDownloadURL,
+  uploadBytes,
+  uploadString,
+  deleteObject,
+  listAll,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js";
 
 export default {
   name: "DeleteView",
   data() {
     return {
       Concert: {
-        nom: null, 
-        image: null, 
+        nom: null,
+        image: null,
       },
 
-      refConcert: null, 
-      imageActuelle: null, 
+      refconcert: null,
+      imageActuelle: null,
     };
   },
   mounted() {
     console.log("id concert", this.$route.params.id);
-    // Recherche participant concerné
     this.getConcert(this.$route.params.id);
   },
 
@@ -26,22 +70,18 @@ export default {
     async getConcert(id) {
       const firestore = getFirestore();
       const docRef = doc(firestore, "concert", id);
-      // Référence du participant concerné
       this.refConcert = await getDoc(docRef);
-      // Test si le participant demandé existe
       if (this.refConcert.exists()) {
-        // Si oui on récupère ses données
         this.concert = this.refConcert.data();
-        // Mémorisation photoActuelle
-        this.imageActuelle = this.concert.image;
+        this.imageProg = this.concert.image;
       } else {
-        this.console.log("Participant inexistant");
+        this.console.log("Concert inexistant");
       }
       const storage = getStorage();
       const spaceRef = ref(storage, "prog/" + this.concert.image);
       getDownloadURL(spaceRef)
         .then((url) => {
-          this.imageActuelle = url;
+          this.imageProg = url;
         })
         .catch((error) => {
           console.log("erreur downloadUrl", error);
@@ -53,10 +93,8 @@ export default {
       await deleteDoc(doc(firestore, "concert", this.$route.params.id));
       const storage = getStorage();
       let docRef = ref(storage, "prog/" + this.mentions.image);
-      // Suppression du fichier
       deleteObject(docRef);
 
-      // redirection sur la liste des participants
       this.$router.push("/programmation");
     },
   },
