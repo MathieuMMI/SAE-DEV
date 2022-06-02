@@ -7,4 +7,4 @@
 * [HeroIcons pour Vue 3](https://github.com/tailwindlabs/heroicons#vue)
 
 ArtisteView = Liste simple
-ProgrammationView = Liste complexe
+ProgrammationView = Liste complexe (équivalent de ListeView)

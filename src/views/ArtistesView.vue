@@ -46,8 +46,8 @@ export default {
   methods: {
     async getArtiste() {
       const firestore = getFirestore();
-      const dbArtiste = collection(firestore, "artiste");
-      const q = query(dbArtiste, orderBy("nom", "asc"));
+      const dbConcert = collection(firestore, "artiste");
+      const q = query(dbConcert, orderBy("nom", "asc"));
       await onSnapshot(q, (snapshot) => {
         this.listeArtiste = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
         console.log("listeArtiste", this.listeArtiste);
@@ -56,12 +56,10 @@ export default {
           const storage = getStorage();
           // Récupération de l'image par son nom de fichier
           const spaceRef = ref(storage, "personne/" + personne.image);
-          console.log("image de l'artiste", personne.image);
+          console.log("image du artiste", personne.image);
           // Récupération de l'url complète de l'image
           getDownloadURL(spaceRef)
             .then((url) => {
-              // On remplace le nom du fichier
-              // Par l'url complète de la photo
               personne.image = url;
               console.log("image de l'artiste", personne.image);
             })
