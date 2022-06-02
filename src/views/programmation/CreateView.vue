@@ -101,7 +101,7 @@ export default {
     },
     previewImage: function (event) {
       this.file = this.$refs.file.files[0];
-      this.prog.image = this.file.name;
+      this.concert.image = this.file.name;
       var input = event.target;
       if (input.files && input.files[0]) {
         var reader = new FileReader();
@@ -113,7 +113,7 @@ export default {
     },
     async createConcert() {
       const storage = getStorage();
-      const refStorage = ref(storage, "concert/" + this.concert.image);
+      const refStorage = ref(storage, "prog/" + this.concert.image);
       await uploadString(refStorage, this.imageData, "data_url").then((snapshot) => {
         console.log("Uploaded a base64 string");
 
@@ -122,7 +122,7 @@ export default {
         const docRef = addDoc(collection(db, "concert"), this.concert);
       });
       // redirection sur la liste des concert
-      this.$router.push("/concert");
+      this.$router.push("/programmation");
     },
   },
 };
