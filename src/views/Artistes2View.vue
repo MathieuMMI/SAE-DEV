@@ -5,31 +5,36 @@
       <h6 class="mt-12 text-center">Nouvel artiste</h6>
       <div class="text-center">
         <p class="input-group-text">Libellé</p>
-        <input type="text" class="form-control bg-gray-700 text-white" v-model="nom" required />
-        <button class="text-center" type="button" @click="createArtiste2()" title="Création">
-          <p class="input-group-text text-xl text-black">Ajouter un artiste</p>
-        </button>
+        <input type="text" class="form-control bg-gray-700 text-amber-400" v-model="nom" required />
+        <div class="grid">
+          <button class="text-center" type="button" @click="createArtiste2()" title="Création">
+            <p class="input-group-text text-xl text-black">Ajouter un artiste</p>
+          </button>
+        </div>
       </div>
     </form>
     <h6 class="mt-12 text-center">Filtrage</h6>
     <div class="text-center">
-      <input type="text" class="form-control bg-gray-700 text-center text-white" v-model="filter" />
-      <button class="text-center" type="button" title="Filtrage">
-        <p class="input-group-text text-xl text-black">Filtrer</p>
-      </button>
+      <input type="text" class="form-control bg-gray-700 text-center text-xl text-amber-400" v-model="filter" />
     </div>
     <div class="text-center">
-      <form v-for="artiste2 in filterByName" :key="artiste2.id">
-        <h6 class="mt-12 text-center">Nom</h6>
-        <input type="text" class="form-control" v-model="artiste2.nom" required />
+      <button class="" type="button" title="Filtrage">
+        <p class="text-xl text-black">Filtrer</p>
+      </button>
+    </div>
+    <form v-for="artiste2 in filterByName" :key="artiste2.id">
+      <div class="mt-12 text-center">
+        <input type="text" class="form-control text-center text-xl" v-model="artiste2.nom" required />
+      </div>
+      <div class="grid text-center">
         <button class="text-center" type="button" @click="updateArtiste2(artiste2)" title="Modification">
           <p class="input-group-text text-xl text-black">Modifier</p>
         </button>
         <button class="text-center" type="button" @click="deleteArtiste2(artiste2)" title="Suppression">
           <p class="input-group-text text-xl text-black">Supprimer</p>
         </button>
-      </form>
-    </div>
+      </div>
+    </form>
   </main>
 </template>
 

@@ -1,24 +1,23 @@
 <template>
   <form enctype="multipart/form-data" @submit.prevent="updateConcert">
-    <h2 class="mb-5 ml-2 text-center text-2xl text-black">Mise à jour concert</h2>
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Nom</span>
+    <h2 class="mb-5 ml-2 mt-10 text-center text-2xl text-black">Mise à jour concert</h2>
+    <div class="input-group text-center">
+      <div class="input-group-prepend text-center">
+        <p class="text-center text-xl">Nom</p>
       </div>
-      <input class="form-control" placeholder="Nom du concert" v-model="concert.nom" required />
+      <input class="form-control text-amber-600 text-center" placeholder="Nom du concert" v-model="concert.nom" required />
     </div>
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text">Photo</span>
+        <p class="text-center text-xl">Photo</p>
       </div>
-      <div class="custom-file">
+      <div class="custom-file text-center">
         <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" />
-        <label class="custom-file-label" for="file">Sélectionner l'image</label>
       </div>
     </div>
-    <div>
-      <button type="submit" class="btn btn-dark float-left">Modifier</button>
-      <button class="btn btn-dark float-right mb-[40%]">
+    <div class="mt-10 grid text-center">
+      <button type="submit" class="">Modifier</button>
+      <button class="mb-[40%]">
         <RouterLink to="/programmation">Fermer</RouterLink>
       </button>
     </div>

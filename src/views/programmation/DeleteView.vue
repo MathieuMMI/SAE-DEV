@@ -1,21 +1,19 @@
 <template>
   <form enctype="multipart/form-data" @submit.prevent="deleteConcert">
-    <h2 class="mb-5 ml-2 text-center text-2xl text-black">Suppression d'unconcert</h2>
+    <h2 class="mb-5 text-center text-2xl text-black">Suppression du concert</h2>
+    <img class="preview img-fluid m-auto" :src="imageActuelle" />
     <div class="text-center">
-      <img class="preview img-fluid" :src="imageConcert" />
-    </div>
-    <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text">Nom</span>
+      <div class="input-group-prepend text-center">
+        <span class="input-group-text mt-7 text-center">Nom</span>
       </div>
-      <input class="form-control" placeholder="Nom du concert" v-model="Concert.nom" disabled/>
+      <input class="form-control text-amber-600 text-center" placeholder="Nom" v-model="Concert.nom" disabled />
+      <h3 class="alert alert-warning mt-7 text-center text-xl text-red-500" role="alert">
+        Attention vous allez supprimer ce participant, cette action est irréversible !!
+      </h3>
     </div>
-    <h3 class="alert alert-warning text-center text-black" role="alert">
-      Attention vous allez supprimer ce participant, cette action est irréversible !!
-    </h3>
-    <div>
-      <button type="submit" class="btn btn-dark float-left">Supprimer</button>
-      <button class="mb-[40%] btn btn-dark float-right">
+    <div class="mt-7 grid text-center">
+      <button type="submit" class="mb-4">Supprimer</button>
+      <button class="mb-[40%]">
         <RouterLink to="/programmation">Fermer</RouterLink>
       </button>
     </div>

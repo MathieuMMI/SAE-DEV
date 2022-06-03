@@ -2,29 +2,27 @@
   <div class="container m-auto mb-[20%]">
     <form enctype="multipart/form-data" @submit.prevent="createConcert">
       <div class="card bg-dark">
-        <h2 class="mb-5 ml-2 text-center text-2xl text-black">Création concert</h2>
+        <h2 class="mt-10 mb-5 ml-2 text-center text-2xl text-black">Création concert</h2>
 
-        <div class="col-6">
+        <div class="text-center">
           <div class="input-group">
             <div class="input-group-prepend">
-              <span class="input-group-text">Nom</span>
+              <span class="input-group-text text-xl">Nom</span>
             </div>
-            <input class="form-control" placeholder="Nom du concert" v-model="concert.nom" required />
+            <input class="form-control text-xl text-amber-600 text-center" placeholder="Nom du concert" v-model="concert.nom" required />
           </div>
           <div class="input-group">
             <div class="input-group-prepend">
-              <span class="input-group-text">Photo</span>
+              <span class="input-group-text text-xl">Photo</span>
             </div>
             <div class="custom-file">
               <input type="file" class="custom-file-input" ref="file" id="file" @change="previewImage" />
-              <label class="custom-file-label" for="file">Sélectionner l'image</label>
             </div>
           </div>
         </div>
-
-        <div class="card-footer">
-          <button type="submit" class="btn btn-dark float-left">Créer</button>
-          <button class="btn btn-dark float-right">
+        <div class="grid text-center mt-7">
+          <button type="submit" class="mb-2 text-xl">Créer</button>
+          <button class="text-xl">
             <router-link to="/programmation">Fermer</router-link>
           </button>
         </div>
