@@ -1,11 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AccueilView from '../views/AccueilView.vue'
 import ProgrammationView from '../views/programmation/ProgrammationView.vue'
+import ProgrammationrView from '../views/ProgrammationrView.vue'
 import CreateConcert from '../views/programmation/CreateView.vue'
 import UpdateConcert from '../views/programmation/UpdateView.vue'
 import DeleteConcert from '../views/programmation/DeleteView.vue'
 import ArtistesView from '../views/ArtistesView.vue'
 import Artistes2View from '../views/Artistes2View.vue'
+import ArtistesrView from '../views/ArtistesrView.vue'
 import FestivalView from '../views/FestivalView.vue'
 import ContactView from '../views/ContactView.vue'
 import ConcertView from '../views/ConcertView.vue'
@@ -18,11 +20,13 @@ const router = createRouter({
   routes: [
     { path: '/',                    name: 'Accueil',              component: AccueilView },
     { path: '/programmation',       name: 'Programmation',        component: ProgrammationView },
+    { path: '/programmationr',      name: 'Programmationr',       component: ProgrammationrView },
     { path: '/createConcert',       name: 'CreateConcert',        component: CreateConcert },
     { path: '/updateConcert/:id',   name: 'UpdateConcert',        component: UpdateConcert },
     { path: '/deleteConcert/:id',   name: 'DeleteConcert',        component: DeleteConcert },
     { path: '/artistes',            name: 'Artistes',             component: ArtistesView },
     { path: '/artistes2',           name: 'Artistes2',            component: Artistes2View },
+    { path: '/artistesr',           name: 'Artistesr',            component: ArtistesrView },
     { path: '/festival',            name: 'Festival',             component: FestivalView },
     { path: '/contact',             name: 'Contact',              component: ContactView },
     { path: '/concert',             name: 'Concert',              component: ConcertView },

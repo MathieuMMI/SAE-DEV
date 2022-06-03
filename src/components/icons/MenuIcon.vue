@@ -32,8 +32,10 @@
         :class="{ 'translate-x-0': menuOuvert }">
         <ul class="mt-36 flex flex-col gap-3 text-center text-3xl">
             <li class="mt-8"><router-link to="/programmation" @click="menuOuvert = !menuOuvert">Programmation</router-link></li>
+            <li class="mt-8"><router-link to="/programmationr" @click="menuOuvert = !menuOuvert">Programmation Responsive</router-link></li>
             <li class="mt-8"><router-link to="/artistes" @click="menuOuvert = !menuOuvert">Artistes</router-link></li>
             <li class="mt-8"><router-link to="/artistes2" @click="menuOuvert = !menuOuvert">Artistes2</router-link></li>
+            <li class="mt-8"><router-link to="/artistesr" @click="menuOuvert = !menuOuvert">Artistes Responsive</router-link></li>
             <li class="mt-8"><router-link to="/festival" @click="menuOuvert = !menuOuvert">Festival</router-link></li>
             <li class="mt-8"><router-link to="/contact" @click="menuOuvert = !menuOuvert">Contact</router-link></li>
         </ul>
