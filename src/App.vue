@@ -40,7 +40,21 @@ import LogoNormal from "./components/LogoNormal.vue";
 import MobileLogo from "./components/MobileLogo.vue";
 import LgLogo from "./components/LgLogo.vue";
 import MenuIcon from "./components/icons/MenuIcon.vue";
+
+import { emitter } from './main.js'
+
 export default {
   components: { MobileLogo, LogoNormal, LgLogo, MenuIcon },
+  
+  mounted(){
+    emitter.on('connectUser', e => {
+      this.user = e.user;
+      console.log('App => Reception user connecté', this.user);
+    })
+    emitter.on('deConnectUser', e => {
+      this.user = e.user;
+      console.log('App => Reception user deconnecté', this.user);
+    })
+  }
 };
 </script>
