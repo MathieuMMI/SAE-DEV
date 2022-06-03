@@ -7,4 +7,5 @@
 * [HeroIcons pour Vue 3](https://github.com/tailwindlabs/heroicons#vue)
 
 ArtisteView = Liste avec image sans modification
-ProgrammationView = Liste complexe, avec création, modification et supression
+ProgrammationView = Liste complexe,mise à jour (création, modification et supression)
+Artistes2View = Liste avec mise à jour mais sans image + filter

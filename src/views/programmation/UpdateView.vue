@@ -1,9 +1,6 @@
 <template>
   <form enctype="multipart/form-data" @submit.prevent="updateConcert">
     <h2 class="mb-5 ml-2 text-center text-2xl text-black">Mise à jour concert</h2>
-    <div class="text-center">
-      <img class="preview img-fluid" :src="imageData" />
-    </div>
     <div class="input-group">
       <div class="input-group-prepend">
         <span class="input-group-text">Nom</span>

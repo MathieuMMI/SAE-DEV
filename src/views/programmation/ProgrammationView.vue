@@ -54,7 +54,7 @@ export default {
     async getConcert() {
       const firestore = getFirestore();
       const dbConcert = collection(firestore, "concert");
-      const q = query(dbConcert, orderBy("nom", "asc"));
+      const q = query(dbConcert, orderBy("nom", "desc"));
       await onSnapshot(q, (snapshot) => {
         this.listeConcert = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
         console.log("listeConcert", this.listeConcert);
