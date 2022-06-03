@@ -24,7 +24,7 @@
     </div>
     <form v-for="artiste2 in filterByName" :key="artiste2.id">
       <div class="mt-12 text-center">
-        <input type="text" class="form-control text-center text-xl" v-model="artiste2.nom" required />
+        <input type="text" class="bg-gray-700 text-amber-400 form-control text-center text-xl" v-model="artiste2.nom" required />
       </div>
       <div class="grid text-center">
         <button class="text-center" type="button" @click="updateArtiste2(artiste2)" title="Modification">
