@@ -36,6 +36,7 @@
             <li class="mt-8"><router-link to="/artistes2" @click="menuOuvert = !menuOuvert">Artistes2</router-link></li>
             <li class="mt-8"><router-link to="/festival" @click="menuOuvert = !menuOuvert">Festival</router-link></li>
             <li class="mt-8"><router-link to="/contact" @click="menuOuvert = !menuOuvert">Contact</router-link></li>
+            <li class="mt-8"><router-link to="/compte" @click="menuOuvert = !menuOuvert">Compte</router-link></li>
         </ul>
         <div class="relative bottom-96 left-3/4">
             <button>

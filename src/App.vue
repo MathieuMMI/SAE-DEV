@@ -8,12 +8,13 @@
       </router-link>
       <h1 class="flex-shrink-0 flex-grow-0 text-left text-4xl text-slate-900 md:text-5xl lg:text-6xl xl:hidden">CANTAND’O</h1>
       <menu-icon />
-      <ul class="absolute right-[300px] top-[55px] hidden h-6 w-[803px] xl:flex">
+      <ul class="absolute right-[500px] top-[55px] hidden h-6 w-[803px] xl:flex">
         <li class="ml-10 text-left text-[40px] font-medium text-slate-900"><RouterLink to="/programmation">Programmation</RouterLink></li>
         <li class="ml-10 text-left text-[40px] font-medium text-slate-900"><RouterLink to="/artistes">Artistes</RouterLink></li>
         <li class="ml-10 text-left text-[40px] font-medium text-slate-900"><RouterLink to="/artistes2">Artistes2</RouterLink></li>
         <li class="ml-10 text-left text-[40px] font-medium text-slate-900"><RouterLink to="/festival">Festival</RouterLink></li>
         <li class="ml-10 text-left text-[40px] font-medium text-slate-900"><RouterLink to="/contact">Contact</RouterLink></li>
+        <li class="ml-10 text-left text-[40px] font-medium text-slate-900"><RouterLink to="/compte">Compte</RouterLink></li>
       </ul>
     </nav>
   </header>

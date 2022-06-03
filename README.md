@@ -13,3 +13,5 @@ Artistes2View = Liste avec mise à jour mais sans image + filter
 ArtistesRView = Page sans appel à Firebase uniquement responsive
 ProgrammationRView = Page sans appel à Firebase uniquement responsive
 Attention : pour ne pas casser le responsive du menu, elles ne sont pas toutes accessibles par le header. Les responsive ne sont accessibles que par l'url.
+
+Fonctions liées au compte uniquement accessible par ordinateur
