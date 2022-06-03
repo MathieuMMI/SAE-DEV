@@ -1,6 +1,7 @@
 <template>
   <h2 class="mt-5 mb-7 text-center text-2xl font-semibold text-black">Programmation</h2>
   <router-link to="createConcert"><p class="float-right text-xl text-black">Créer un nouveau concert</p></router-link>
+  <router-link to="UpdateConcert"><p class="text-xl text-black">Modifier un concert</p></router-link>
   <div class="flex justify-center gap-5 md:ml-8 md:mr-8">
     <figure v-for="concert in listeConcert" :key="concert.nom" class="flex flex-col">
       <img :alt="concert.nom" :src="concert.image" class="w-full rounded-tl-3xl rounded-tr-3xl dark:bg-zinc-900" />
@@ -11,9 +12,14 @@
           <p class="ml-3 mb-5 text-left text-sm text-white">Retrouvez toutes les infos sur notre premier concert.</p>
         </div>
       </figcaption>
+      <RouterLink :to="{ name: 'DeleteConcert', params: { id: concert.id } }">
+        <p class="text-xl text-black">Supprimer un concert</p>
+      </RouterLink>
+      <RouterLink :to="{ name: 'UpdateConcert', params: { id: concert.id } }">
+        <p class="mb-[40%] text-xl text-black">Modifier un concert</p>
+      </RouterLink>
     </figure>
   </div>
-  <router-link to="deleteConcert"><p class="mb-[20%] text-xl text-black">Supprimer un concert</p></router-link>
 </template>
 
 <script>
